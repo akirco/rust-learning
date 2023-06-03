@@ -4,6 +4,13 @@
 scoop install rustup-msvc
 ```
 
+## new rust project
+
+```shell
+# create project
+cargo new <projectName>
+```
+
 ## rustup - rust toolchain installer
 
 ```shell
@@ -26,6 +33,18 @@ cargo new [packageName]
 
 # create a new package in a dir
 cargo init
+
+# cargo version
+cargo --version
+
+# build code --debug
+cargo build
+
+# build code --release
+cargo build --release
+
+# compiler + excute
+cargo run
 
 # more: cargo -h
 ```
