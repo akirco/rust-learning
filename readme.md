@@ -1,3 +1,24 @@
+- [rust install for windows](#rust-install-for-windows)
+- [new rust project](#new-rust-project)
+- [rustup - rust toolchain installer](#rustup---rust-toolchain-installer)
+- [rustc - rust complier](#rustc---rust-complier)
+- [cargo - rust package manager](#cargo---rust-package-manager)
+- [cargo.toml - config file](#cargotoml---config-file)
+- [cargo concept](#cargo-concept)
+- [building and running a cargo project](#building-and-running-a-cargo-project)
+- [cargo command](#cargo-command)
+- [Cargo as Convention](#cargo-as-convention)
+- [rust guess game](#rust-guess-game)
+  - [generating a secret number](#generating-a-secret-number)
+    - [questions](#questions)
+- [rust basic](#rust-basic)
+  - [variables and mutability - 变量 与 可变性](#variables-and-mutability---变量-与-可变性)
+  - [constants - 常量](#constants---常量)
+  - [shadowing](#shadowing)
+    - [questions](#questions-1)
+
+
+
 ## rust install for windows
 
 ```shell
