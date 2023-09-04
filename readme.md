@@ -176,10 +176,9 @@ fn main() {
         }
     }
 }
-
 ```
 
-### questions
+#### questions
 
 1. [`crate` , `mod`, `fn`怎么理解？怎么创建？](docs/1.md)
 
@@ -196,3 +195,72 @@ fn main() {
 7. [`enum `类型是否可以用除 `match `外匹配](docs/7.md)
 
 8. [`loop`与 for, while 的区别](docs/8.md)
+
+## rust basic
+
+### variables and mutability - 变量 与 可变性
+
+```rust
+fn main() {
+    let x = 5; //不可变的变量
+    println!("the value of x is: {x}");
+    x = 6; //不能给变量x第二次分配值
+    println!("the value of x is: {x}");
+}
+```
+
+```rust
+fn main() {
+    let mut x = 5;
+    println!("the value of x is: {x}"); //5
+    x = 6;
+    println!("the value of x is: {x}"); //6
+}
+```
+
+### constants - 常量
+
+1. not allow use it with `mut`
+2. can be declared in any scope
+3. only as a constant expression
+
+```rust
+const THREE*HOURS_IN_SECONDS: u32 = 60 * 60 * 3;
+```
+
+### shadowing
+
+> declare a new variable with the same name as previous variable
+
+1. shadowing is diff from marking a variable as mut,we got a compile-time error if reassign this variable without use let keyword.
+
+2. let is create a new variable only reuse the same name.
+
+> 在同一个作用域中使用相同名称的变量来覆盖之前的变量。当我们使用 let 关键字声明一个变量时，如果之前已经存在同名的变量，新的变量会覆盖旧的变量，这就是 shadowing。
+
+> 与重新赋值不同，shadowing 允许我们改变变量的类型和值。这样做的好处是可以在不改变变量名称的情况下，对变量进行修改或重新定义。
+
+```rust
+fn main() {
+    let x = 5;
+    let x = x + 1;
+    {
+        let x = x * 2;
+        println!("the value of x in the inner scope is: {x}");
+    }
+    println!("the value of x is: {x}");
+}
+```
+
+```rust
+    // let spaces = "    ";
+    // let spaces = spaces.len();
+    // println!("the spaces length is: {spaces}"); //4
+    let mut spaces = "    "; //&str type
+    spaces = spaces.len(); // error : usize type
+    println!("the spaces length is: {spaces}");
+```
+
+#### questions
+
+[shadowing 常见的使用场景](./docs/9.md)
